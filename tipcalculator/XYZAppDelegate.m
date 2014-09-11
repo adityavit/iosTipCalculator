@@ -7,6 +7,7 @@
 //
 
 #import "XYZAppDelegate.h"
+#import "TipViewController.h"
 
 @implementation XYZAppDelegate
 
@@ -15,6 +16,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    TipViewController *tvc = [[TipViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tvc];
+    self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
     return YES;
 }
